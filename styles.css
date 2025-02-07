@@ -1,0 +1,39 @@
+/* Full-screen background GIF */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: url('loading.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Ensuring content is visible on top of the background */
+header, main, footer {
+    position: relative;
+    z-index: 1;
+    color: #fff; /* Change text color to ensure visibility */
+}
+
+header h1, main h2, main p {
+    background-color: rgba(0, 0, 0, 0.5); /* Adding semi-transparent background to text for better readability */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Adding semi-transparent background to links for better readability */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
