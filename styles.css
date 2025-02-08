@@ -8,32 +8,14 @@ body {
 }
 
 /* Ensuring content is visible on top of the background */
-header, main, footer {
+main {
     position: relative;
     z-index: 1;
     color: #fff; /* Change text color to ensure visibility */
 }
 
-header h1, main h2, main p {
-     background-color: rgba(); /* Adding semi-transparent background to text for better readability */
+main h2, main p {
+    background-color: rgba(0, 0, 0, 0.5); /* Adding semi-transparent background to text for better readability */
     padding: 10px;
-    border-radius: 5px; 
-
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    background-color: (); /* Adding semi-transparent background to links for better readability */
-    padding: 5px 10px;
     border-radius: 5px;
 }
