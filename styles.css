@@ -19,3 +19,8 @@ main h2, main p {
     padding: 10px;
     border-radius: 5px;
 }
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
