@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three.js and aframe Scene</title>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mayognaise/aframe-gif-shader/dist/aframe-gif-shader.min.js"></script> 
     <script src="./look-at.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/kxq5syt.css">
     <link rel="stylesheet" href="https://use.typekit.net/kxq5syt.css">
     <style>
        
@@ -25,13 +27,36 @@
             <img id="week_8" src="./img/week_8.png">
             <img id="week_9" src="./img/week_9.png">
             
-            <img id="label" src="./label.jpg">
+            <img id="label" src="./img/label.jpg">
+            <video id="sigil1" autoplay loop="true" src="./img/sigil1.mov"></video>
+            <video id="sigil2" autoplay loop="true" src="./img/sigil2.mov"></video>
+            <video id="sigil3" autoplay loop="true" src="./img/sigil3.mov"></video>
+            <video id="sigil4" autoplay loop="true" src="./img/sigil4.mov"></video>
+            <video id="sigil5" autoplay loop="true" src="./img/sigil5.mov"></video>
+            <video id="sigil6" autoplay loop="true" src="./img/sigil6.mov"></video>
+            <video id="loading" src="./img/loading.mp4" autoplay loop="true" crossorigin="anonymous"></video>
+
+
+            <img id="arduino" src="./img/arduino.jpg">
+            <img id="whole" src="./img/whole.jpg">
+            <img id="whole2" src="./img/whole2.jpg">
+            <img id="whole3" src="./img/whole3.jpg">
+            <img id="intent" src="./img/intent.jpg">
+            <img id="outcome" src="./img/outcome.jpg">
+            <img id="peny" src="./img/peny.jpg">
+            <img id="penholder" src="./img/penholder.jpg">
+            <img id="wiyi" src="./img/wiyi.png">
+            <img id="wiyi" src="./img/wiyi.png">
+            <img id="sky" src="./img/sky.png">
+
           </a-assets>
         
-        <a-plane position="0 -3 -2" rotation="-90 45 0" width="6" height="6" color="#7BC8A4"></a-plane>
+    
+        <a-image src="#wiyi" height="5.5" width="5.5" rotation="-90 0 0" position="0 -2.99 -2"></a-image>
+        <a-plane position="0 -3 -2" rotation="-90 45 0" width="6" height="6" color="#7BC8A4" ></a-plane>
         <a-entity id="custom-octahedron" material="opacity: 0.37; shader: standard; side: back; vertexColorsEnabled: false; color: #0964f6" position="0 1.6 -2" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear;"></a-entity>
-        <a-sky color="#8ECAE6"></a-sky>
-        <a-entity id="camera" camera look-controls wasd-controls position="0 1.6 4"> </a-entity>
+        <a-sky src="#sky" color="#8ECAE6"></a-sky>
+        <a-entity id="camera" camera look-controls wasd-controls position="0 1.6 7"> </a-entity>
         <a-entity line="start: 0 0.5 -2; end: 0 2.5 -2; color: lightblue; opacity= 0.25; transparency=true"></a-entity>
         <a-entity line__2="start: 0 0.5 -2; end: 0 2.5 -2; color: blue; opacity= 0.25; transparency=true"></a-entity>
         <!--<a-entity  line__3=" color=blue; start: -3 1.6 0; end: 3 1.6 0;" opacity="0.2"></a-entity>-->
@@ -63,8 +88,8 @@
         <a-circle radius="20" color="#333" position="-55 -3.5 -2" rotation="-90 45 0"></a-circle>
         <a-circle radius="25" color="#111" position="0 -4 -57" rotation="-90 45 0"></a-circle>
         <a-circle radius="20" color="#333" position="0 -3.5 -57" rotation="-90 45 0"></a-circle>
-        <a-circle radius="25" color="#111" position="0 -4 53" rotation="-90 45 0"></a-circle>
-        <a-circle radius="20" color="#333" position="0 -3.5 53" rotation="-90 45 0"></a-circle>
+        <a-circle radius="25" color="#111" position="0 -4 55" rotation="-90 45 0"></a-circle>
+        <a-circle radius="20" color="#333" position="0 -3.5 55" rotation="-90 45 0"></a-circle>
         <!-- <a-plane position="0 -3 23" rotation="-90 0 0" width="6" height="6" color="#7BC8A4" material="color: #333" scale="5 5 2"></a-plane>
         <a-plane position="-15 3 29" rotation="180 -90 0" width="6" height="6" color="#7BC8A4" material="color: #333" scale="3 2 2"></a-plane> <!--right wall-->
         <!-- <a-plane position="15 3 29" rotation="180 90 0" width="6" height="6" color="#7BC8A4" material="color: #333" scale="3 2 2"></a-plane> <!--left wall-->
@@ -81,10 +106,50 @@
          week 9 . right
         <a-entity position="-15 7 29" rotation="0 90 0" text="color: white; letterSpacing: 5; lineHeight: 50; value: [LINE AND LETTER SPACING] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam; width: 3">
         </a-entity> -->
-        <a-curvedimage src="#label" height="30.0" radius="30   " theta-length="100"
-        rotation="0 100 0" scale="1 1 1" theta-start="30" position="0 10 0"></a-curvedimage>
+        <a-curvedimage src="#label" height="20.0" radius="30   " theta-length="60"
+        rotation="0 100 0" scale="1 1 1" theta-start="50" position="0 7.5 0"></a-curvedimage>
+        <a-curvedimage src="#loading" height="30.0" radius="30" theta-length="100"
+        rotation="0 100 0" scale="1 1 1" theta-start="30" position="0 7.77 -1"></a-curvedimage>
+        
+        <a-curvedimage src="#sigil2" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="0" position="0 0 0"></a-curvedimage>
+        <a-curvedimage src="#sigil3" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="-50" position="0 0 0"></a-curvedimage>
+        <a-curvedimage src="#sigil4" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="-100" position="0 0 0"></a-curvedimage>
+        <a-curvedimage src="#sigil5" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="-150" position="0 0 0"></a-curvedimage>
+        <a-curvedimage src="#sigil6" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="-200" position="0 0 0"></a-curvedimage>
+        <a-curvedimage src="#sigil1" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="-250" position="0 0 0"></a-curvedimage>
+
+
+        <a-curvedimage src="#whole" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="0" position="0 15 0"></a-curvedimage>
+        <a-curvedimage src="#whole2" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="-50" position="0 15 0"></a-curvedimage>
+        <a-curvedimage src="#intent" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="-100" position="0 15 0"></a-curvedimage>
+        <a-curvedimage src="#outcome" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="-150" position="0 15 0"></a-curvedimage>
+        <a-curvedimage src="#penholder" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="-200" position="0 15 0"></a-curvedimage>
+        <a-curvedimage src="#whole3" height="15.0" radius="30   " theta-length="50"
+        rotation="0 100 0" scale="1 1 1" theta-start="-250" position="0 15 0"></a-curvedimage>
+        <!-- <a-video src="#sigil1" width="16" height="9" position="0 0 -20"></a-video>
+        <a-video src="#sigil2" width="16" height="9" position="0 0 -20"></a-video> -->
+
+        
+        <a-text value="what is your intent?"  position="0 -.5 3" rotation="-45 0 0" align="center" font="./img/Citizen-msdf.json" font-image="./img/Citizen.png" negate="false"></a-text>
+        
+        
+
+        
+</a-text>
         <!-- img gallery-->
-    <a-entity id="image-gallery-container" position="0 -25 0" scroll-y-control="sensitivity: 0.004;">
+   
+        <!-- <a-entity id="image-gallery-container" position="0 -25 0" scroll-y-control="sensitivity: 0.004;"> 
         <a-curvedimage src="#week_1" height="22.0" radius="30   " theta-length="36"
         rotation="0 100 0" scale="1 1 1" theta-start="160"></a-curvedimage>
         <a-curvedimage src="#week_2" height="12.0" radius="30   " theta-length="36"
@@ -103,11 +168,16 @@
         rotation="0 100 0" scale="1 1 1" theta-start="-120"></a-curvedimage>
         <a-curvedimage src="#week_9" height="10.0" radius="30   " theta-length="36"
         rotation="0 100 0" scale="1 1 1" theta-start="-160"></a-curvedimage>
-        </a-entity>
+        </a-entity> -->
 
     </a-scene>
 
     <script>
+        AFRAME.registerComponent('gif-shader', {
+  init: function() {
+    console.log('GIF Shader initialized');
+  }
+});
         // Ensure A-Frame is loaded before this script runs if main.js is also a module type
        
        AFRAME.registerComponent('custom-octahedron', {
