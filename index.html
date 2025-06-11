@@ -28,13 +28,13 @@
             <img id="week_9" src="./img/week_9.png">
             
             <img id="label" src="./img/label.JPG">
-            <video id="sigil1" autoplay loop="true" src="./img/sigil1.mov"></video>
-            <video id="sigil2" autoplay loop="true" src="./img/sigil2.mov"></video>
-            <video id="sigil3" autoplay loop="true" src="./img/sigil3.mov"></video>
-            <video id="sigil4" autoplay loop="true" src="./img/sigil4.mov"></video>
-            <video id="sigil5" autoplay loop="true" src="./img/sigil5.mov"></video>
-            <video id="sigil6" autoplay loop="true" src="./img/sigil6.mov"></video>
-            <video id="loading" src="./img/loading.mp4" autoplay loop="true" crossorigin="anonymous"></video>
+            <video id="sigil1" autoplay muted loop="true" src="./img/sigil1.mov"></video>
+            <video id="sigil2" autoplay muted loop="true" src="./img/sigil2.mov"></video>
+            <video id="sigil3" autoplay muted loop="true" src="./img/sigil3.mov"></video>
+            <video id="sigil4" autoplay muted loop="true" src="./img/sigil4.mov"></video>
+            <video id="sigil5" autoplay muted loop="true" src="./img/sigil5.mov"></video>
+            <video id="sigil6" autoplay muted loop="true" src="./img/sigil6.mov"></video>
+            <video id="loading" src="./img/loading.mp4" autoplay muted loop="true" crossorigin="anonymous"></video>
 
 
             <img id="arduino" src="./img/arduino.JPG">
@@ -173,12 +173,15 @@
     </a-scene>
 
     <script>
-        window.addEventListener('click', () => {
+
+window.addEventListener('click', () => {
   document.querySelectorAll('video').forEach(video => {
     video.muted = true; // Ensure muted for autoplay
     video.play().catch(() => {}); // Attempt to play, ignore errors
   });
 }, { once: true }); // Only once on first click
+
+
         AFRAME.registerComponent('gif-shader', {
   init: function() {
     console.log('GIF Shader initialized');
