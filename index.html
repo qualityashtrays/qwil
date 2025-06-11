@@ -173,6 +173,12 @@
     </a-scene>
 
     <script>
+        window.addEventListener('click', () => {
+  document.querySelectorAll('video').forEach(video => {
+    video.muted = true; // Ensure muted for autoplay
+    video.play().catch(() => {}); // Attempt to play, ignore errors
+  });
+}, { once: true }); // Only once on first click
         AFRAME.registerComponent('gif-shader', {
   init: function() {
     console.log('GIF Shader initialized');
